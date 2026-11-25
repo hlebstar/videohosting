@@ -235,3 +235,102 @@ body {
     font-size: 13px;
     color: #888;
 }
+
+/*видео*/
+.vid-page {
+    max-width: 900px;
+}
+
+.player {
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.player-vid {
+    width: 100%;
+    display: block;
+    max-height: 500px;
+}
+
+.vid-head {
+    margin-bottom: 12px;
+}
+
+.vid-name {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.vid-stats {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.vid-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-act {
+    padding: 8px 14px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-act:hover {
+    background: #f0f0f0;
+}
+
+.vid-desc {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    color: #333;
+}
+
+.ttl-sm {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.com-form {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.com-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.com-item {
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.com-user {
+    font-size: 14px;
+}
+
+.com-date {
+    font-size: 12px;
+    color: #999;
+    margin-left: 8px;
+}
+
+.com-text {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+}
