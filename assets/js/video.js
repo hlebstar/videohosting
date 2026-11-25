@@ -1,25 +1,26 @@
 let liked = false;
 let disliked = false;
 
-document.getElementById('btn-like')?.addEventListener('click', function() {
+document.getElementById('btn-like')?.addEventListener('click', function () {
     if (liked) return;
     const el = document.getElementById('likes');
     el.textContent = parseInt(el.textContent) + 1;
     liked = true;
 });
 
-document.getElementById('btn-dislike')?.addEventListener('click', function() {
+document.getElementById('btn-dislike')?.addEventListener('click', function () {
     if (disliked) return;
     const el = document.getElementById('dislikes');
     el.textContent = parseInt(el.textContent) + 1;
     disliked = true;
 });
 
-document.getElementById('com-form')?.addEventListener('submit', function(e) {
+document.getElementById('com-form')?.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const text = document.getElementById('com-text').value.trim();
-    const err  = document.getElementById('err-com');
+    const input = document.getElementById('com-text');
+    const text  = input.value.trim();
+    const err   = document.getElementById('err-com');
 
     err.textContent = '';
 
@@ -29,26 +30,24 @@ document.getElementById('com-form')?.addEventListener('submit', function(e) {
     }
 
     const list = document.getElementById('com-list');
-    const item = document.createElement('div');
-    item.className = 'com-item';
+    if (!list) return;
 
-    const user = document.createElement('strong');
-    user.className = 'com-user';
+    const msg = document.createElement('div');
+    msg.className = 'chat-msg';
+
+    const user = document.createElement('span');
+    user.className = 'chat-user';
     user.textContent = 'Вы';
 
-    const date = document.createElement('span');
-    date.className = 'com-date';
-    date.textContent = 'только что';
+    const txt = document.createElement('span');
+    txt.className = 'chat-text';
+    txt.textContent = ' ' + text;
 
-    const p = document.createElement('p');
-    p.className = 'com-text';
-    p.textContent = text; 
+    msg.appendChild(user);
+    msg.appendChild(txt);
 
-    item.appendChild(user);
-    item.appendChild(date);
-    item.appendChild(p);
+    list.appendChild(msg);
+    list.scrollTop = list.scrollHeight;
 
-    list.prepend(item);
-
-    document.getElementById('com-text').value = '';
+    input.value = '';
 });

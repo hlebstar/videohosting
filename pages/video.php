@@ -24,52 +24,70 @@ $id = $_GET['id'] ?? 0;
 </header>
 
 <main class="main">
-    <div class="vid-page">
-        <div class="player">
-            <video controls class="player-vid">
-                <source src="" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
-        </div>
-
-        <div class="vid-head">
-            <h1 class="vid-name">Название видео</h1>
-            <div class="vid-stats">
-                <span id="likes">0</span> лайков ·
-                <span id="dislikes">0</span> дизлайков ·
-                <span id="date">01.01.2026</span>
+    <div class="watch-layout">
+        
+        <div class="watch-main">
+            <div class="player">
+                <video controls class="player-vid" poster="">
+                    <source src="" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
             </div>
-            <div class="vid-actions">
-                <button class="btn-act" id="btn-like"> Лайк</button>
-                <button class="btn-act" id="btn-dislike"> Дизлайк</button>
-            </div>
-        </div>
 
-        <p class="vid-desc">Описание видео появится здесь.</p>
+            <div class="vid-head">
+                <h1 class="vid-name">Название видео</h1>
+                
+                <div class="streamer-info">
+                    <div class="avatar"></div>
+                    <div class="streamer-meta">
+                        <div class="streamer-name">username</div>
+                        <div class="streamer-cat">Категория</div>
+                    </div>
+                    <button class="btn-sub">Подписаться</button>
+                </div>
 
-        <section class="comments">
-            <h2 class="ttl-sm">Комментарии</h2>
-
-            <form id="com-form" class="com-form">
-                <textarea id="com-text" class="f-in f-ta" placeholder="Написать комментарий..." rows="3"></textarea>
-                <span class="f-err" id="err-com"></span>
-                <button type="submit" class="btn btn-sm">Отправить</button>
-            </form>
-
-            <div class="com-list" id="com-list">
-                <div class="com-item">
-                    <strong class="com-user">user1</strong>
-                    <span class="com-date">01.01.2026</span>
-                    <p class="com-text">Пример комментария</p>
+                <div class="vid-stats-bar">
+                    <div class="stats-left">
+                        <span id="likes">0</span> лайков ·
+                        <span id="dislikes">0</span> дизлайков
+                    </div>
+                    <div class="vid-actions">
+                        <button class="btn-act" id="btn-like">Лайк</button>
+                        <button class="btn-act" id="btn-dislike"> Дизлайк</button>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <div class="vid-desc-box">
+                <h3 class="ttl-sm">Описание</h3>
+                <p class="vid-desc">Описание видео появится здесь.</p>
+            </div>
+        </div>
+
+        <!-- Правая колонка — комментарии -->
+        <div class="watch-side">
+            <div class="chat-header">
+                <h2>Комментарии</h2>
+            </div>
+            
+            <div class="chat-list" id="com-list">
+                <div class="chat-msg">
+                    <span class="chat-user">user1</span>
+                    <span class="chat-text">Пример комментария</span>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <form id="com-form" class="chat-form">
+                    <input type="text" id="com-text" class="chat-input" placeholder="Написать комментарий..." autocomplete="off">
+                    <button type="submit" class="chat-send-btn">➤</button>
+                </form>
+                <span class="f-err" id="err-com"></span>
+            </div>
+        </div>
+
     </div>
 </main>
-
-<footer class="ft">
-    <p>© 2026 VideoHost</p>
-</footer>
 
 <script src="../assets/js/video.js"></script>
 </body>
