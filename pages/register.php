@@ -13,10 +13,9 @@ session_start();
 
 <header class="hd">
     <div class="hd-in">
-        <a href="index.php" class="logo">VideoHost</a>
-        <nav class="nav">
-            <a href="login.php" class="nav-l">Вход</a>
-        </nav>
+        <a href="index.php" class="logo">
+            <span class="logo-icon"></span> VideoLA
+        </a>
     </div>
 </header>
 

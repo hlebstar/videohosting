@@ -1,30 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const list = document.getElementById('my-list');
-    const empty = list.querySelector('.empty');
+    console.log('Скрипт my-videos.js загружен');
 
-    // Делегирование событий для кнопок удаления
-    list.addEventListener('click', (e) => {
-        const btn = e.target.closest('.btn-del');
-        if (!btn) return;
+    const menuBtn = document.getElementById('user-menu-btn');
+    const dropdown = document.getElementById('user-dropdown');
 
-        const card = btn.closest('.vid-card');
-        if (!card) return;
-
-        if (confirm('Удалить это видео?')) {
-            card.remove();
-            checkEmpty();
-        }
-    });
-
-    function checkEmpty() {
-        const cards = list.querySelectorAll('.vid-card');
-        if (cards.length === 0) {
-            empty.style.display = 'block';
-        } else {
-            empty.style.display = 'none';
-        }
+    if (menuBtn && dropdown) {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target) && e.target !== menuBtn) {
+                dropdown.classList.remove('show');
+            }
+        });
     }
 
-    // Проверяем при загрузке
-    checkEmpty();
+    const searchInput = document.getElementById('video-search');
+    const tableBody = document.getElementById('video-table-body');
+    
+    if (searchInput && tableBody) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            const rows = tableBody.querySelectorAll('tr');
+            let visibleCount = 0;
+
+            rows.forEach(row => {
+                // Ищем текст в заголовке видео
+                const titleElement = row.querySelector('.table-vid-title');
+                if (!titleElement) return;
+
+                const text = titleElement.textContent.toLowerCase();
+
+                if (text.includes(query)) {
+                    row.style.display = ''; // Показываем
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none'; // Скрываем
+                }
+            });
+            
+            // Обновляем счетчик внизу таблицы (опционально)
+            const footerText = document.querySelector('.table-footer span');
+            if (footerText) {
+                footerText.textContent = `Строк на странице: 30 · Показано ${visibleCount} из ${rows.length}`;
+            }
+        });
+    }
 });

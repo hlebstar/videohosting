@@ -12,14 +12,17 @@ session_start();
 </head>
 <body>
 
+
+
+
 <header class="hd">
     <div class="hd-in">
-        <a href="index.php" class="logo">VideoHost</a>
-        <nav class="nav">
-            <a href="index.php" class="nav-l">Главная</a>
-            <a href="admin.php" class="nav-l">Админка</a>
-            <a href="login.php" class="nav-l">Выход</a>
-        </nav>
+        <a href="index.php" class="logo">
+            <span class="logo-icon"></span> VideoLA
+        </a>
+        <div class="hd-actions">
+            <a href="login.php" class="btn-out">Выход</a>
+        </div>
     </div>
 </header>
 
@@ -31,7 +34,6 @@ session_start();
         <button class="tab" data-tab="users">Пользователи</button>
     </div>
 
-    <!-- Список видео -->
     <section id="tab-videos" class="tab-content">
         <table class="tbl">
             <thead>
@@ -62,7 +64,6 @@ session_start();
         </table>
     </section>
 
-    <!-- Список пользователей -->
     <section id="tab-users" class="tab-content" style="display:none;">
         <table class="tbl">
             <thead>

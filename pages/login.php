@@ -11,14 +11,15 @@ session_start();
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    
+
+
+
 <header class="hd">
-<div class="hd-in">
- <a href="index.php" class="logo">VideoHost</a>
- <nav class="nav">
- <a href="register.php" class="nav-l">Регистарция</a>
- </nav>
-</div>
+    <div class="hd-in">
+        <a href="index.php" class="logo">
+            <span class="logo-icon"></span> VideoLA
+        </a>
+    </div>
 </header>
 
 <main class="main">
