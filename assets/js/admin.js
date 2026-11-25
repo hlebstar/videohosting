@@ -9,13 +9,21 @@ document.querySelectorAll('.tab').forEach(btn => {
     });
 });
 
-//сохранение статуса
+// сохранение статуса
 document.querySelectorAll('.btn-save').forEach(btn => {
     btn.addEventListener('click', function() {
         const row = this.closest('tr');
         const id = row.querySelector('.status-sel').dataset.id;
         const status = row.querySelector('.status-sel').value;
+
+        // Демонстрация: сохраняем в localStorage
+        localStorage.setItem('video_status_' + id, status);
         alert(`Статус видео #${id} изменён на: ${status}`);
-        //потом доабвить апи
     });
+});
+
+// Восстанавливаем статусы при загрузке
+document.querySelectorAll('.status-sel').forEach(sel => {
+    const saved = localStorage.getItem('video_status_' + sel.dataset.id);
+    if (saved) sel.value = saved;
 });

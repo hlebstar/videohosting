@@ -1,6 +1,6 @@
 <?php
 session_start();
-// позже здесь будет проверка: если не авторизован → редирект на login
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -16,7 +16,6 @@ session_start();
     <div class="hd-in">
         <a href="index.php" class="logo">VideoHost</a>
         <nav class="nav">
-            <a href="index.php" class="nav-l">Главная</a>
             <a href="my-videos.php" class="nav-l">Мои видео</a>
             <a href="upload.php" class="nav-l">Загрузить</a>
             <a href="login.php" class="nav-l">Вход</a>

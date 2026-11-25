@@ -351,9 +351,9 @@ body {
 }
 
 .tab.active {
-    background: #e74c3c;
+    background: #68033e;
     color: #fff;
-    border-color: #e74c3c;
+    border-color: #890983;
 }
 
 .tbl {
@@ -396,4 +396,156 @@ body {
 
 .btn-save:hover {
     background: #219a52;
+}
+
+@media (max-width: 900px) {
+    .hd-in {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .srch {
+        order: 3;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .vid-list {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    .vid-page {
+        max-width: 100%;
+    }
+
+    .tbl {
+        font-size: 13px;
+    }
+
+    .tbl th,
+    .tbl td {
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hd {
+        padding: 10px 0;
+    }
+
+    .hd-in {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .nav-l {
+        font-size: 13px;
+        padding: 4px 0;
+    }
+
+    .srch {
+        width: 100%;
+    }
+
+    .main {
+        margin: 16px auto;
+        padding: 0 12px;
+    }
+
+    .ttl {
+        font-size: 20px;
+    }
+
+    .form-box {
+        margin: 20px 0;
+        padding: 20px 16px;
+        border-radius: 6px;
+    }
+
+    .page-hd {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .vid-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .vid-thumb {
+        height: 180px;
+    }
+
+    .vid-name {
+        font-size: 18px;
+    }
+
+    .vid-actions {
+        flex-wrap: wrap;
+    }
+
+    .player-vid {
+        max-height: 240px;
+    }
+
+    .admin-tabs {
+        flex-wrap: wrap;
+    }
+
+ 
+    .tbl {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 380px) {
+    .nav-l {
+        font-size: 12px;
+    }
+
+    .btn,
+    .btn-sm {
+        width: 100%;
+        text-align: center;
+    }
+
+    .vid-stats {
+        font-size: 13px;
+    }
+}
+
+.vid-title a {
+    color: inherit;
+    text-decoration: none;
+}
+.vid-title a:hover {
+    color: #6f0875;
+}
+.vid-thumb {
+    display: flex;
+    text-decoration: none;
+}
+
+a.vid-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+a.vid-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.15s;
 }

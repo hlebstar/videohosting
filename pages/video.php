@@ -16,7 +16,6 @@ $id = $_GET['id'] ?? 0;
     <div class="hd-in">
         <a href="index.php" class="logo">VideoHost</a>
         <nav class="nav">
-            <a href="index.php" class="nav-l">Главная</a>
             <a href="my-videos.php" class="nav-l">Мои видео</a>
             <a href="upload.php" class="nav-l">Загрузить</a>
             <a href="login.php" class="nav-l">Вход</a>
@@ -41,8 +40,8 @@ $id = $_GET['id'] ?? 0;
                 <span id="date">01.01.2026</span>
             </div>
             <div class="vid-actions">
-                <button class="btn-act" id="btn-like">👍 Лайк</button>
-                <button class="btn-act" id="btn-dislike">👎 Дизлайк</button>
+                <button class="btn-act" id="btn-like"> Лайк</button>
+                <button class="btn-act" id="btn-dislike"> Дизлайк</button>
             </div>
         </div>
 

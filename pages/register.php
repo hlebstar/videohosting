@@ -15,7 +15,6 @@ session_start();
     <div class="hd-in">
         <a href="index.php" class="logo">VideoHost</a>
         <nav class="nav">
-            <a href="index.php" class="nav-l">Главная</a>
             <a href="login.php" class="nav-l">Вход</a>
         </nav>
     </div>

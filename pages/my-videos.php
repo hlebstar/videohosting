@@ -1,6 +1,6 @@
 <?php
 session_start();
-// позже: проверка авторизации
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -16,7 +16,6 @@ session_start();
     <div class="hd-in">
         <a href="index.php" class="logo">VideoHost</a>
         <nav class="nav">
-            <a href="index.php" class="nav-l">Главная</a>
             <a href="my-videos.php" class="nav-l">Мои видео</a>
             <a href="upload.php" class="nav-l">Загрузить</a>
             <a href="login.php" class="nav-l">Вход</a>
@@ -32,11 +31,17 @@ session_start();
 
     <div class="vid-list" id="my-list">
         <div class="vid-card">
-            <div class="vid-thumb">Нет превью</div>
-            <div class="vid-info">
-                <h3 class="vid-title">Пример видео</h3>
-                <p class="vid-meta">0 лайков · статус: нет ограничений</p>
-            </div>
+    <a href="video.php?id=1" class="vid-thumb">Нет превью</a>
+    <div class="vid-info">
+        <h3 class="vid-title">
+            <a href="video.php?id=1">Пример видео</a>
+        </h3>
+        <p class="vid-meta">0 лайков · статус: нет ограничений</p>
+        <div class="vid-actions">
+            <button class="btn-act btn-del" data-id="1">Удалить</button>
+        </div>
+    </div>
+</div>
         </div>
 
         <p class="empty" style="display:none;">У вас пока нет видео</p>

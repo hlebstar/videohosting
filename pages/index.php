@@ -1,5 +1,5 @@
 <?php
-// Здесь позже будет логика (сессия, получение видео и т.д.)
+
 session_start();
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,6 @@ session_start();
         </form>
 
         <nav class="nav">
-            <a href="index.php" class="nav-l">Главная</a>
             <a href="my-videos.php" class="nav-l">Мои видео</a>
             <a href="upload.php" class="nav-l">Загрузить</a>
             <a href="login.php" class="nav-l">Вход</a>
@@ -35,8 +34,14 @@ session_start();
     <h1 class="ttl">Последние видео</h1>
     
     <div class="vid-list">
-        <p class="empty">Видео пока нет</p>
-    </div>
+    <a href="video.php?id=1" class="vid-card">
+        <div class="vid-thumb">Нет превью</div>
+        <div class="vid-info">
+            <h3 class="vid-title">Пример видео</h3>
+            <p class="vid-meta">user1 · 0 просмотров</p>
+        </div>
+    </a>
+</div>
 </main>
 
 <footer class="ft">
