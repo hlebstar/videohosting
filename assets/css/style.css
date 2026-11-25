@@ -334,3 +334,66 @@ body {
     font-size: 14px;
     line-height: 1.4;
 }
+
+/*админка*/
+.admin-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #e74c3c;
+    color: #fff;
+    border-color: #e74c3c;
+}
+
+.tbl {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.tbl th,
+.tbl td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.tbl th {
+    background: #f8f8f8;
+    font-weight: 600;
+}
+
+.status-sel {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-save {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-save:hover {
+    background: #219a52;
+}
