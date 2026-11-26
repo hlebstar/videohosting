@@ -14,7 +14,7 @@ session_start();
 <header class="hd">
     <div class="hd-in">
         <a href="index.php" class="logo">
-            <span class="logo-icon">▶</span> VideoLA
+            VideoLA
         </a>
 
         <form class="srch" action="index.php" method="get">
@@ -29,19 +29,20 @@ session_start();
     </div>
 </header>
 
-<!-- 1. БАННЕР НА ВЕСЬ ЭКРАН -->
 <section class="hero-banner">
-    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2070&auto=format&fit=crop');"></div>
+    <div class="hero-bg" style="background-image: url('https://i.pinimg.com/736x/05/e3/ea/05e3ea8567d4a2a786673adbc319a231.jpg');"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1 class="hero-title">Добро пожаловать на VideoLA</h1>
-        <p class="hero-subtitle">Смотрите, загружайте и делитесь лучшими моментами</p>
+        <p class="hero-subtitle"> С нашим сервисом вы легко сможете смотреть, загружать и так же оставлять своё мнение к каждому видео</p>
         <a href="upload.php" class="hero-btn">Загрузить видео</a>
     </div>
 </section>
 
-<!-- 2. СЛАЙДЕР -->
+
+
 <section class="slider-section">
+     <h1 class="hero-title2">Галерея о нас</h1>
     <div class="carousel">
         <button class="carousel-btn prev" id="slider-prev">‹</button>
 
@@ -71,26 +72,74 @@ session_start();
     <div class="carousel-dots" id="slider-dots"></div>
 </section>
 
-<!-- 3. ВИДЕО -->
 <main class="main">
     <h1 class="ttl">Последние видео</h1>
     <div class="vid-list">
-        <a href="video.php?id=1" class="vid-card">
+     
+        <a href="video.php?id=2" class="vid-card">
             <div class="vid-thumb-wrap">
                 <div class="vid-thumb no-img"><span>Нет превью</span></div>
-                <span class="vid-duration">18:56</span>
+                <span class="vid-duration">0:00</span>
             </div>
             <div class="vid-info">
                 <div class="vid-avatar"></div>
                 <div class="vid-meta-text">
-                    <h3 class="vid-title">Почему ВСЕ берут MacBook Neo вместо Windows?</h3>
-                    <p class="vid-author">Overtake lab</p>
-                    <p class="vid-stats">156 тыс. просмотров · 4 мес. назад</p>
+                    <h3 class="vid-title">Пример видео</h3>
+                    <p class="vid-author">user1</p>
+                    <p class="vid-stats">0 просмотров · только что</p>
                 </div>
             </div>
         </a>
 
-        <a href="video.php?id=2" class="vid-card">
+           <a href="video.php?id=2" class="vid-card">
+            <div class="vid-thumb-wrap">
+                <div class="vid-thumb no-img"><span>Нет превью</span></div>
+                <span class="vid-duration">0:00</span>
+            </div>
+            <div class="vid-info">
+                <div class="vid-avatar"></div>
+                <div class="vid-meta-text">
+                    <h3 class="vid-title">Пример видео</h3>
+                    <p class="vid-author">user1</p>
+                    <p class="vid-stats">0 просмотров · только что</p>
+                </div>
+            </div>
+        </a>
+
+
+           <a href="video.php?id=2" class="vid-card">
+            <div class="vid-thumb-wrap">
+                <div class="vid-thumb no-img"><span>Нет превью</span></div>
+                <span class="vid-duration">0:00</span>
+            </div>
+            <div class="vid-info">
+                <div class="vid-avatar"></div>
+                <div class="vid-meta-text">
+                    <h3 class="vid-title">Пример видео</h3>
+                    <p class="vid-author">user1</p>
+                    <p class="vid-stats">0 просмотров · только что</p>
+                </div>
+            </div>
+        </a>
+
+
+           <a href="video.php?id=2" class="vid-card">
+            <div class="vid-thumb-wrap">
+                <div class="vid-thumb no-img"><span>Нет превью</span></div>
+                <span class="vid-duration">0:00</span>
+            </div>
+            <div class="vid-info">
+                <div class="vid-avatar"></div>
+                <div class="vid-meta-text">
+                    <h3 class="vid-title">Пример видео</h3>
+                    <p class="vid-author">user1</p>
+                    <p class="vid-stats">0 просмотров · только что</p>
+                </div>
+            </div>
+        </a>
+
+
+           <a href="video.php?id=2" class="vid-card">
             <div class="vid-thumb-wrap">
                 <div class="vid-thumb no-img"><span>Нет превью</span></div>
                 <span class="vid-duration">0:00</span>
