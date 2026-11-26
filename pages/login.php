@@ -3,16 +3,14 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>вход</title>
+    <title>Вход — VideoLA</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-
-
+<body class="auth-page">
 
 <header class="hd">
     <div class="hd-in">
@@ -30,22 +28,22 @@ session_start();
 
     <form id="login-form" class="form" method="post" action="">
 
-<div class="f-group">
-    <label class="f-group">Логин или Email</label>
-    <input type="text" name="login" id="login" class="f-in" required>
-    <span class="f-err" id="err-login"></span>
-</div>
+        <div class="f-group">
+            <label class="f-lbl">Логин или Email</label>
+            <input type="text" name="login" id="login" class="f-in" required>
+            <span class="f-err" id="err-login"></span>
+        </div>
 
-<div class="f-group">
-    <label class="f-ldl">пароль</label>
-    <input type="password" name="pass" id="pass" class="f-in" required>
-    <span class="f-err" id="err-pass"></span>
-</div>
-<button type="submit" class="btn">войти</button>
+        <div class="f-group">
+            <label class="f-lbl">Пароль</label>
+            <input type="password" name="pass" id="pass" class="f-in" required>
+            <span class="f-err" id="err-pass"></span>
+        </div>
+        
+        <button type="submit" class="btn">Войти</button>
     </form>
 
-    <p class="form-link">нет акаунта?</p>
-    <a href="register.php">зарегестрирвоатся</a>
+    <p class="form-link">Нет аккаунта? <a href="register.php">Зарегистрироваться</a></p>
 </div>
 
 </main>

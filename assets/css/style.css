@@ -848,7 +848,6 @@ a.vid-card:hover {
 }
 
 /* upload*/
-
 .studio-main {
     max-width: 1200px;
     margin: 32px auto;
@@ -1355,7 +1354,6 @@ a.vid-card:hover {
     }
 }
 
-
 /* мои видео подожение*/
 
 .channel-header {
@@ -1570,4 +1568,57 @@ a.vid-card:hover {
     .table-vid-item {
         min-width: 300px;
     }
+}
+
+/* Настройка фона для страниц входа и регистрации */
+body.auth-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/img/palm-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* */
+body.auth-page .form-box {
+    background: rgba(255, 255, 255, 0.321); 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); 
+    border-radius: 16px; 
+    padding: 40px;
+    margin-top: 60px;
+}
+
+/* Чтобы текст (заголовок) не сливался со стеклом, сделаем его чуть темнее и добавим легкую тень */
+body.auth-page .ttl {
+    color: #310137;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Слегка корректируем поля ввода, чтобы они не сливались с прозрачной формой */
+body.auth-page .f-in {
+    background: rgba(209, 198, 198, 0.49);
+}
+
+body.auth-page .f-in:focus {
+    background: #fff;
+    border-color: #6f0875;
+    box-shadow: 0 0 0 3px rgba(111, 8, 117, 0.15); 
+}
+
+body.auth-page .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(111, 8, 117, 0.3);
+}
+
+body.auth-page .btn:hover {
+    box-shadow: 0 6px 14px rgba(111, 8, 117, 0.4);
+    transform: translateY(-1px);
 }
