@@ -1,14 +1,13 @@
 <?php
 session_start();
 
-// ЕСЛИ ПОЛЬЗОВАТЕЛЬ НЕ ВОШЕЛ - ПЕРЕНАПРАВЛЯЕМ НА ВХОД
-// (Раскомментируйте это, когда сделаете реальную авторизацию)
+// ЕСЛИ ПОЛЬЗОВАТЕЛЬ НЕ ВОШЕЛ  ПЕРЕНАПРАВЛЯЕМ НА ВХОД ДЛЯ ПУНКТА 3 В БУУДЩЕМ 
 // if (!isset($_SESSION['user_id'])) {
 //     header('Location: login.php');
 //     exit;
 // }
 
-// Заглушка для демонстрации (потом удалите)
+// Загл для демонстрации
 if (!isset($_SESSION['user_name'])) {
     $_SESSION['user_name'] = 'хлебушек';
     $_SESSION['user_email'] = 'user@example.com';
@@ -47,7 +46,6 @@ if (!isset($_SESSION['user_name'])) {
                 </button>
                 <div class="user-dropdown" id="user-dropdown">
                     <div class="dropdown-header">
-                        <!-- ВЫВОДИМ ИМЯ И EMAIL ИЗ СЕССИИ -->
                         <strong><?= htmlspecialchars($_SESSION['user_name']) ?></strong>
                         <span><?= htmlspecialchars($_SESSION['user_email']) ?></span>
                     </div>
@@ -62,18 +60,15 @@ if (!isset($_SESSION['user_name'])) {
 
 <main class="main" style="max-width: 1200px; padding: 0 20px;">
     
-    <!-- ПРОФИЛЬ / ШАПКА КАНАЛА -->
     <div class="channel-header">
         <div class="channel-avatar"></div>
         <div class="channel-info">
-            <!-- ВЫВОДИМ ИМЯ ИЗ СЕССИИ -->
             <h1 class="channel-name"><?= htmlspecialchars($_SESSION['user_name']) ?></h1>
             <p class="channel-handle">@<?= htmlspecialchars($_SESSION['user_name']) ?>-<?= $_SESSION['user_id'] ?> · <a href="#" style="color:#606060; text-decoration:none;">Перейти на канал</a></p>
             
         </div>
     </div>
 
-    <!-- ИСТОРИЯ ПРОСМОТРОВ -->
     <div class="section-header">
         <h2 class="section-title">История</h2>
         <a href="#" class="view-all-link">Посмотреть все</a>
@@ -93,10 +88,9 @@ if (!isset($_SESSION['user_name'])) {
                 </div>
             </div>
         </a>
-        <!-- ... другие карточки истории ... -->
+       
     </div>
 
-    <!-- МОИ ВИДЕО (ТАБЛИЦА) -->
     <div class="studio-table-section">
         <div class="studio-table-header">
             <div class="filter-box">
@@ -112,13 +106,13 @@ if (!isset($_SESSION['user_name'])) {
                     <th>Видео</th>
                     <th>Уведомления</th>
                     <th>Доступ</th>
-                    <th>Дата ↓</th>
+                    <th>Дата </th>
                     <th>Просмотры</th>
                     <th>Комментарии</th>
                 </tr>
             </thead>
             <tbody id="video-table-body">
-                <!-- Строка 1 -->
+            
                 <tr>
                     <td><input type="checkbox"></td>
                     <td>
@@ -130,13 +124,13 @@ if (!isset($_SESSION['user_name'])) {
                             </div>
                         </div>
                     </td>
-                    <td><span style="color:#e74c3c;">⚠ Комментарии отключены</span></td>
-                    <td><span style="color:#666;">🔗 По ссылке</span></td>
+                    <td><span style="color:#e74c3c;">⚠Комментарии отключены</span></td>
+                    <td><span style="color:#666;"> По ссылке</span></td>
                     <td><div style="color:#222;">21 мар. 2026 г.</div><div style="font-size:12px; color:#888;">Загружено</div></td>
                     <td>1</td>
                     <td>0</td>
                 </tr>
-                <!-- Строка 2 -->
+               
                 <tr>
                     <td><input type="checkbox"></td>
                     <td>
@@ -148,28 +142,10 @@ if (!isset($_SESSION['user_name'])) {
                             </div>
                         </div>
                     </td>
-                    <td><span style="color:#e74c3c;">⚠ Комментарии отключены</span></td>
-                    <td><span style="color:#666;">🔗 По ссылке</span></td>
-                    <td><div style="color:#222;">21 мар. 2026 г.</div><div style="font-size:12px; color:#888;">Загружено</div></td>
+                    <td><span style="color:#e74c3c;"> Комментарии отключены</span></td>
+                    <td><span style="color:#666;"> По ссылке</span></td>
+                    <td><div style="color:#222;">2 мар. 2026 г.</div><div style="font-size:12px; color:#888;">Загружено</div></td>
                     <td>1</td>
-                    <td>0</td>
-                </tr>
-                <!-- Строка 3 -->
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <div class="table-vid-item">
-                            <div class="table-thumb"><span class="table-dur">0:25</span></div>
-                            <div class="table-vid-info">
-                                <div class="table-vid-title">Баг №3, «Кнопка «Сброс» не изменяет ID персонажа, в главном меню»</div>
-                                <div class="table-vid-desc">Задание №2. Громоздова Екатерина</div>
-                            </div>
-                        </div>
-                    </td>
-                    <td><span style="color:#e74c3c;">⚠ Комментарии отключены</span></td>
-                    <td><span style="color:#666;">🔗 По ссылке</span></td>
-                    <td><div style="color:#222;">21 мар. 2026 г.</div><div style="font-size:12px; color:#888;">Загружено</div></td>
-                    <td>2</td>
                     <td>0</td>
                 </tr>
             </tbody>
