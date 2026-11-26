@@ -1,29 +1,41 @@
-// переключение вкладок
-document.querySelectorAll('.tab').forEach(btn => {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
+document.addEventListener('DOMContentLoaded', () => {
+    const titles = {
+        videos: 'Видео',
+        users: 'Пользователи',
+        cats: 'Категории'
+    };
 
-        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
-        document.getElementById('tab-' + this.dataset.tab).style.display = 'block';
+    // Переключение вкладок через сайдбар
+    document.querySelectorAll('.sidebar-link[data-tab]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+
+            document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+            const tab = this.dataset.tab;
+            document.getElementById('tab-' + tab).style.display = 'block';
+
+            const title = document.getElementById('admin-title');
+            if (title) title.textContent = titles[tab] || tab;
+        });
     });
-});
 
-// сохранение статуса
-document.querySelectorAll('.btn-save').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const row = this.closest('tr');
-        const id = row.querySelector('.status-sel').dataset.id;
-        const status = row.querySelector('.status-sel').value;
-
-        // Демонстрация: сохраняем в localStorage
-        localStorage.setItem('video_status_' + id, status);
-        alert(`Статус видео #${id} изменён на: ${status}`);
+    // Сохранение статуса
+    document.querySelectorAll('.btn-save').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const row = this.closest('tr');
+            const id = row.querySelector('.status-sel').dataset.id;
+            const status = row.querySelector('.status-sel').value;
+            localStorage.setItem('video_status_' + id, status);
+            alert(`Статус видео #${id} изменён на: ${status}`);
+        });
     });
-});
 
-// Восстанавливаем статусы при загрузке
-document.querySelectorAll('.status-sel').forEach(sel => {
-    const saved = localStorage.getItem('video_status_' + sel.dataset.id);
-    if (saved) sel.value = saved;
+    // Восстановление статусов
+    document.querySelectorAll('.status-sel').forEach(sel => {
+        const saved = localStorage.getItem('video_status_' + sel.dataset.id);
+        if (saved) sel.value = saved;
+    });
 });
