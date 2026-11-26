@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Загрузка видео — VideoHost</title>
+    <title>загрузка видео</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -50,19 +50,18 @@ session_start();
             <div class="studio-col-left">
                 <div class="studio-card">
                     <div class="f-group">
-                        <label class="f-lbl">Название (обязательное поле) <span style="color:#888; cursor:help;" title="Название должно быть понятным">?</span></label>
+                        <label class="f-lbl">Название <span style="color:#888; cursor:help;" title="Название должно быть понятным"></span></label>
                         <input type="text" name="title" id="title" class="f-in studio-input" placeholder="Добавьте название, которое описывает ваше видео" required>
                         <span class="f-err" id="err-title"></span>
                     </div>
 
                     <div class="f-group" style="margin-top: 16px;">
-                        <label class="f-lbl">Описание <span style="color:#888; cursor:help;" title="Расскажите о видео">?</span></label>
+                        <label class="f-lbl">Описание <span style="color:#888; cursor:help;" title="Расскажите о видео"></span></label>
                         <textarea name="desc" id="desc" class="f-in f-ta studio-textarea" rows="6" placeholder="Расскажите зрителям о своем видео"></textarea>
                         <span class="f-err" id="err-desc"></span>
                     </div>
-                </div>
 
-                <div class="studio-card">
+
                     <div class="f-group">
                         <label class="f-lbl">Плейлисты</label>
                         <p style="font-size: 13px; color: #666; margin-bottom: 8px;">Добавьте видео хотя бы в один плейлист, чтобы зрителям было удобнее ориентироваться на вашем канале.</p>
@@ -86,6 +85,8 @@ session_start();
                         <span class="f-err" id="err-cat"></span>
                     </div>
                 </div>
+
+                
             </div>
 
             <div class="studio-col-right">
@@ -117,10 +118,6 @@ session_start();
                     <div class="settings-item">
                         <span style="font-weight: 500;">Параметры доступа</span>
                         <span>По ссылке v</span>
-                    </div>
-                    <div class="settings-item">
-                        <span style="font-weight: 500;">Субтитры</span>
-                        <span>ред</span>
                     </div>
                 </div>
             </div>
