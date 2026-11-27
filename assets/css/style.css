@@ -1,6 +1,3 @@
-/* =========================================
-   ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ
-   ========================================= */
 :root {
     --purple: #6f0875;
     --purple-dark: #4a0550;
@@ -30,9 +27,7 @@ a {
     color: inherit;
 }
 
-/* =========================================
-   КНОПКИ
-   ========================================= */
+/*кнопки */
 .btn,
 .btn-sm,
 .btn-in,
@@ -134,6 +129,8 @@ a {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
     gap: 20px;
     padding: 0 20px;
 }
@@ -1561,3 +1558,59 @@ body.auth-page .btn {
         text-align: center;
     }
 }
+
+/*загрузка аватара*/
+.channel-avatar-wrap {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.channel-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--purple);
+    overflow: hidden;
+    border: 3px solid transparent;
+    transition: border 0.2s;
+}
+
+.channel-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.btn-edit-avatar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.btn-edit-avatar:hover {
+    transform: scale(1.1);
+    color: var(--purple);
+}
+
