@@ -7,10 +7,9 @@ session_start();
 //     exit;
 // }
 
-// Загл для демонстрации
 if (!isset($_SESSION['user_name'])) {
-    $_SESSION['user_name'] = 'хлебушек';
-    $_SESSION['user_email'] = 'user@example.com';
+    $_SESSION['user_name'] = 'хлеб';
+    $_SESSION['user_email'] = 'hleb@gmail.com';
     $_SESSION['user_id'] = 1;
 }
 ?>
@@ -19,7 +18,7 @@ if (!isset($_SESSION['user_name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои видео — VideoLA</title>
+    <title>мои видео</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -59,13 +58,16 @@ if (!isset($_SESSION['user_name'])) {
 </header>
 
 <main class="main" style="max-width: 1200px; padding: 0 20px;">
-    
-    <div class="channel-header">
-        <div class="channel-avatar"></div>
+       <div class="channel-header">
+        <div class="channel-avatar-wrap">
+            <div class="channel-avatar" id="avatar-preview"></div>
+            <input type="file" id="avatar-input" accept="image/jpeg, image/png" style="display: none;">
+            <button class="btn-edit-avatar" id="btn-edit-avatar" title="Изменить фото">ред</button>
+        </div>
+        
         <div class="channel-info">
             <h1 class="channel-name"><?= htmlspecialchars($_SESSION['user_name']) ?></h1>
             <p class="channel-handle">@<?= htmlspecialchars($_SESSION['user_name']) ?>-<?= $_SESSION['user_id'] ?> · <a href="#" style="color:#606060; text-decoration:none;">Перейти на канал</a></p>
-            
         </div>
     </div>
 
@@ -76,14 +78,14 @@ if (!isset($_SESSION['user_name'])) {
     <div class="history-grid">
         <a href="video.php?id=1" class="vid-card">
             <div class="vid-thumb-wrap">
-                <div class="vid-thumb no-img"><span>Превью</span></div>
+                <div class="vid-thumb no-img"><span>Видео загружается</span></div>
                 <span class="vid-duration">21:17</span>
             </div>
             <div class="vid-info">
                 <div class="vid-avatar"></div>
                 <div class="vid-meta-text">
-                    <h3 class="vid-title">ЧТО МОЖЕТ САМЫЙ ДЕШЕВЫЙ iPad</h3>
-                    <p class="vid-author">AFaGP</p>
+                    <h3 class="vid-title">Пример</h3>
+                    <p class="vid-author">собачкаафк</p>
                     <p class="vid-stats">293 тыс. просмотров · 12 дн. назад</p>
                 </div>
             </div>
@@ -94,7 +96,6 @@ if (!isset($_SESSION['user_name'])) {
     <div class="studio-table-section">
         <div class="studio-table-header">
             <div class="filter-box">
-                <span class="filter-icon">≡</span>
                 <input type="text" id="video-search" placeholder="Фильтр по названию..." class="filter-input">
             </div>
         </div>
@@ -119,12 +120,12 @@ if (!isset($_SESSION['user_name'])) {
                         <div class="table-vid-item">
                             <div class="table-thumb"><span class="table-dur">0:13</span></div>
                             <div class="table-vid-info">
-                                <div class="table-vid-title">Баг №4, «Счетчик орешков после смерти остается с таким же количеством»</div>
-                                <div class="table-vid-desc">Задание №2. Громоздова Екатерина</div>
+                                <div class="table-vid-title">Счетчик орешков после смерти остается с таким же количеством»</div>
+                                <div class="table-vid-desc">Видео игра паркур</div>
                             </div>
                         </div>
                     </td>
-                    <td><span style="color:#e74c3c;">⚠Комментарии отключены</span></td>
+                    <td><span style="color:#e74c3c;">Комментарии отключены</span></td>
                     <td><span style="color:#666;"> По ссылке</span></td>
                     <td><div style="color:#222;">21 мар. 2026 г.</div><div style="font-size:12px; color:#888;">Загружено</div></td>
                     <td>1</td>
@@ -137,8 +138,8 @@ if (!isset($_SESSION['user_name'])) {
                         <div class="table-vid-item">
                             <div class="table-thumb"><span class="table-dur">0:11</span></div>
                             <div class="table-vid-info">
-                                <div class="table-vid-title">Баг №6, «Персонаж скрывается за ёлкой и мгновенно появляется»</div>
-                                <div class="table-vid-desc">Задание №2. Громоздова Екатерина</div>
+                                <div class="table-vid-title">часть 2 Персонаж скрывается за ёлкой и мгновенно появляется»</div>
+                                <div class="table-vid-desc">Видео игра</div>
                             </div>
                         </div>
                     </td>
@@ -150,17 +151,8 @@ if (!isset($_SESSION['user_name'])) {
                 </tr>
             </tbody>
         </table>
-        
-        <div class="table-footer">
-            <span>Строк на странице: <select><option>30</option></select> · 1–3 из 3</span>
-        </div>
     </div>
-
 </main>
-
-<footer class="ft">
-    <p>© 2026 VideoLA</p>
-</footer>
 
 <script src="../assets/js/my-videos.js"></script>
 </body>
