@@ -1614,3 +1614,14 @@ body.auth-page .btn {
     color: var(--purple);
 }
 
+.vid-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vid-card:hover {
+    transform: translateY(-4px);
+}
+
+.vid-thumb-wrap {
+    transition: box-shadow 0.2s ease;
+}
